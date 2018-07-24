@@ -15,8 +15,10 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
-    return NSApplicationMain(argc, argv);
-}
+@interface SpellingEntry : NSObject
+
+@property NSString *entry;
+
+@end

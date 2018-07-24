@@ -3,17 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		667A1DE12107F1FE0092FEF4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 667A1DE02107F1FE0092FEF4 /* Credits.rtf */; };
 		66D8E41321068F6000AA237B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D8E41221068F6000AA237B /* AppDelegate.m */; };
 		66D8E41521068F6200AA237B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D8E41421068F6200AA237B /* Assets.xcassets */; };
 		66D8E41821068F6200AA237B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D8E41621068F6200AA237B /* MainMenu.xib */; };
 		66D8E41B21068F6200AA237B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D8E41A21068F6200AA237B /* main.m */; };
+		66D8E4262106A3C200AA237B /* SpellingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D8E4252106A3C200AA237B /* SpellingEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		667A1DE02107F1FE0092FEF4 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		667A1DE22107F2220092FEF4 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		66D8E40E21068F6000AA237B /* Spelling Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spelling Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D8E41121068F6000AA237B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		66D8E41221068F6000AA237B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		66D8E41921068F6200AA237B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66D8E41A21068F6200AA237B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66D8E41C21068F6200AA237B /* Spelling_Editor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spelling_Editor.entitlements; sourceTree = "<group>"; };
+		66D8E4242106A3C200AA237B /* SpellingEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpellingEntry.h; sourceTree = "<group>"; };
+		66D8E4252106A3C200AA237B /* SpellingEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpellingEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		66D8E40521068F6000AA237B = {
 			isa = PBXGroup;
 			children = (
+				667A1DE22107F2220092FEF4 /* LICENSE */,
 				66D8E41021068F6000AA237B /* Spelling Editor */,
 				66D8E40F21068F6000AA237B /* Products */,
 			);
@@ -54,8 +61,11 @@
 		66D8E41021068F6000AA237B /* Spelling Editor */ = {
 			isa = PBXGroup;
 			children = (
+				667A1DE02107F1FE0092FEF4 /* Credits.rtf */,
 				66D8E41121068F6000AA237B /* AppDelegate.h */,
 				66D8E41221068F6000AA237B /* AppDelegate.m */,
+				66D8E4242106A3C200AA237B /* SpellingEntry.h */,
+				66D8E4252106A3C200AA237B /* SpellingEntry.m */,
 				66D8E41421068F6200AA237B /* Assets.xcassets */,
 				66D8E41621068F6200AA237B /* MainMenu.xib */,
 				66D8E41921068F6200AA237B /* Info.plist */,
@@ -96,11 +106,16 @@
 				TargetAttributes = {
 					66D8E40D21068F6000AA237B = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = 66D8E40921068F6000AA237B /* Build configuration list for PBXProject "Spelling Editor" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -123,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D8E41521068F6200AA237B /* Assets.xcassets in Resources */,
+				667A1DE12107F1FE0092FEF4 /* Credits.rtf in Resources */,
 				66D8E41821068F6200AA237B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +152,7 @@
 			files = (
 				66D8E41B21068F6200AA237B /* main.m in Sources */,
 				66D8E41321068F6000AA237B /* AppDelegate.m in Sources */,
+				66D8E4262106A3C200AA237B /* SpellingEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,14 +283,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Spelling Editor/Spelling_Editor.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Spelling Editor/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.ahyattdev.Spelling-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -283,14 +297,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Spelling Editor/Spelling_Editor.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Spelling Editor/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.ahyattdev.Spelling-Editor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
